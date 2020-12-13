@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>CleverHealth</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="frontpage.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif;}
+body {font-size:20px;}
+.half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="sidebar MainColor collapse top large padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="button hide-large display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="container">
+    <h1 class="padding-64"><b>CleverHealth</b></h1>
+  </div>
+  <div class="bar-block">
+    <a href="#" onclick="close()" class="bar-item button hover-white">Home</a> 
+    <a href="#intro" onclick="close()" class="bar-item button hover-white">Introduction</a> 
+    <a href="#goal" onclick="close()" class="bar-item button hover-white">Our Goal</a> 
+    <a href="#workers" onclick="close()" class="bar-item button hover-white">Our Workers</a> 
+    <a href="#services" onclick="close()" class="bar-item button hover-white">Services</a> 
+    <a href="#contact" onclick="close()" class="bar-item button hover-white">Contact Us</a>
+  </div>
+  <button class="button padding-large display-bottomleft  black hover-black" style="width:100%;font-size: 20px;">Sign Out</button>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="container top hide-large MainColor xlarge padding">
+  <a href="javascript:void(0)" class="button MainColor margin-right" onclick="w3_open()">☰</a>
+  <span>CleverHealth</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="container" style="margin-top:80px" id="intro">
+    <h1 class="jumbo"><b>Home</b></h1>
+    <h1 class="xxxl text-AccientColor"><b>Welcome to CleverHealth.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="round">
+  </div>
+
+  <!-- Photo grid (modal) -->
+  <div class="row-padding">
+    <div class="half">
+      <img src="FrontPageImages/scrubs.jpeg" style="width:100%" onclick="onClick(this)" alt="Healthcare workers ready to see you!">
+      <img src="FrontPageImages/taxi.jpeg" style="width:100%" onclick="onClick(this)" alt="Drivers at a moments notice!">
+    </div>
+
+    <div class="half">
+      <img src="FrontPageImages/cooks.jpeg" style="width:100%" onclick="onClick(this)" alt="Our professional cooks ready to serve!">
+      <img src="FrontPageImages/medicine.jpeg" style="width:100%" onclick="onClick(this)" alt="The medicines you need a few clicks away!">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="modal black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="button black xxlarge display-topright">×</span>
+    <div class="modal-content animate-zoom center transparent padding-64">
+      <img id="img01" class="image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Mission Statement -->
+  <div class="container" id="goal" style="margin-top:75px;width:50%;">
+    <h1 class="xxxl text-AccientColor"><b>Mission Statement.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="round">
+    <p>We are a healthcare online assitant service that focus on the best practices for your home and what's best for you and loved ones. We help set and orgnize appointments with doctors! 
+	We manage prescription deliveries from local pharmacies! We provide a wide selection of prepared meals cooked by professional chefs just one order away! Along with optional transportation services to your appointments! </p>
+    <p>CleverHealth's core values are forged by our commitment to the highest ethical standards and drive our priorities, 
+	commitments and organizational decisions. Our reputation is the ultimate asset, and these core values guide our behaviors, 
+	judgments and how we accomplish our mission:</p>
+  </div>
+  
+  <!-- Workers -->
+  <div class="container" id="workers" style="margin-top:75px">
+    <h1 class="xxxl text-AccientColor"><b>Our Workers.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="round">
+    <p>The best team for the most important job.</p>
+    <p><b>Every member of our team is thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="row-padding grayscale">
+    <div class="col m4 margin-bottom">
+      <div class="light-grey">
+        <img src="FrontPageImages/doctor.jpeg" alt="doctor" style="width:100%">
+        <div class="container">
+          <h3>Doctors</h3>
+          <p class="opacity">Network of carefully chosen specialists</p>
+          <p>Check local doctors availability</p>
+        </div>
+      </div>
+    </div>
+    <div class="col m4 margin-bottom">
+      <div class="light-grey">
+        <img src="FrontPageImages/chef.jpeg" alt="chef" style="width:100%">
+        <div class="container">
+          <h3>Chefs</h3>
+          <p class="opacity">Our team of pros take pride in their offerings</p>
+          <p>Browse our current offerings for something today!</p>
+        </div>
+      </div>
+    </div>
+    <div class="col m4 margin-bottom">
+      <div class="light-grey">
+        <img src="FrontPageImages/driver.jpeg" alt="driver" style="width:100%">
+        <div class="container">
+          <h3>Drivers</h3>
+          <p class="opacity">Cars & Shuttles</p>
+          <p>Reserve a driver for your next appoinment!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Tables -->
+  <div class="container" id="services" style="margin-top:75px">
+    <h1 class="xxxl text-AccientColor"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="round">
+    <p>Select a service to go to</p>
+  </div>
+
+  <div class="row-padding">
+    <div class="half margin-bottom">
+      <ul class="ul light-grey center">
+        <li class="MainColor xlarge padding-32">Doctor</li>
+        <li class="padding-16">Search Local Area</li>
+        <li class="padding-16">Set A Date</li>
+        <li class="padding-16">
+          <h2>$ 20</h2>
+          <span class="opacity">Service fee</span>
+        </li>
+        <li class="light-grey padding-24">
+          <button class="button MainColor padding-large hover-black">Schedule</button>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="half margin-bottom">
+      <ul class="ul light-grey center">
+        <li class="MainColor xlarge padding-32">Food</li>
+        <li class="padding-16">Search Locally</li>
+        <li class="padding-16">Browse Menu</li>
+        <li class="padding-16">Order</li>
+        <li class="padding-16">Status</li>
+        <li class="padding-16">
+          <h2>$ 7</h2>
+          <span class="opacity">delivery fee</span>
+        </li>
+        <li class="light-grey padding-24">
+          <button class="button MainColor padding-large hover-black">Order</button>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="half">
+      <ul class="ul light-grey center">
+        <li class="MainColor xlarge padding-32">Delivery</li>
+        <li class="padding-16">Track Food</li>
+        <li class="padding-16">Track Prescriptions</li>
+        <li class="light-grey padding-24">
+          <button class="button MainColor padding-large hover-black">Track</button>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="half">
+      <ul class="ul light-grey center">
+        <li class="MainColor xlarge padding-32">Transportation</li>
+        <li class="padding-16">Set location</li>
+        <li class="padding-16">Schedule Pick Up Time</li>
+        <li class="light-grey padding-24">
+          <button class="button MainColor padding-large hover-black">Pick Up</button>
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+  
+  <!-- Contact Us-->
+  <div class="container" id="contact" style="margin-top:75px;width:40%;">
+    <h1 class="xxxl text-AccientColor"><b>Contact Us.</b></h1>
+    <hr style="width:50px;border:5px solid black" class="round">
+    <p>We are here to answer any questions you may have or provide technical support.</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="section">
+        <label>Name</label>
+        <input class="input border" type="text" name="Name" required>
+      </div>
+      <div class="section">
+        <label>Email</label>
+        <input class="input border" type="text" name="Email" required>
+      </div>
+      <div class="section">
+        <label>Message</label>
+        <input class="input border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="button block padding-large MainColor margin-bottom hover-black">Send Message</button>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<div class="light-grey container padding-32" style="margin-top:75px;padding-right:58px"><p class="right">A site by the MAD SCIENTISTS</p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
