@@ -1,0 +1,162 @@
+.left {
+  position: relative;
+  margin-top: 200px;
+  margin-left: 600px;
+}
+.wrapper {
+    background: #ffd800;
+    width: 844px;
+    height: 160px;
+  }
+  .margin-area {
+    position: relative;
+    text-align: center;
+    font-family: "Trebuchet", sans-serif;
+    font-size: 14px;
+    margin: 0 20px;
+  }
+  .dot {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background: #000;
+    border-radius: 50%;
+    top: 10px;
+    color: #fff;
+    line-height: 30px;
+    z-index: 9999;
+  }
+  .one {
+      left: 65px;
+      background: #0C84D9;
+    }
+    .two {
+      left: 280px;
+      background: #0C84D9;
+    }
+    .three {
+      left: 490px;
+      background: #0C84D9;
+    }
+    .four {
+      left: 700px;
+      background: #bbb;
+      color: #ffd800;
+    }
+  .progress-bar {
+    position: absolute;
+    height: 10px;
+    width: 25%;
+    top: 20px;
+    left: 10%;
+    background: #bbb;
+  }
+    .first {
+      background: #0C84D9;
+    }
+    .second {
+      left: 37%;
+      background: #0C84D9;
+    }
+    .third {
+      left: 64%;
+    }
+  
+  .message {
+    position: absolute;
+    height: 60px;
+    width: 170px;
+    padding: 10px;
+    margin: 0;
+    left: -8px;
+    top: 0;
+    color: #000;
+  }
+    .message-1 {
+      top: 40px;
+      color: #000;
+    }
+    .message-2 {
+      left: 210px;
+    }
+    .message-3 {
+      left: 210px;
+      color: #000;
+    }
+    .message-4 {
+      left: 210px;
+    }
+  .status {
+    position: absolute;
+    width: 700px;
+    left: -600px;
+    text-align: center;
+    padding: 20px;
+    color: black;
+  }
+    .code {
+      top: 70px;
+    }
+  a {
+    color: #0C84D9;
+    text-decoration: none;
+    font-weight: bold;
+  }
+    
+body {
+  background-image: url("wallhaven-5we1w9_1920x1080.png");
+  background-color: #cccccc;
+  font-family: 'Lato', sans-serif;
+ }
+
+.content {
+  margin-left: 40%;
+  width: 40%;
+  align-content: center;
+  text-align: center;
+  color: black;
+  background: transparent;
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.left-nav {
+  display: flex;
+}
+
+.nav-wrapper> .left-nav> div {
+  margin-right: 20px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+  height:22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom o.5s;
+}
+
+.nav-link-wrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+  color: black;
+}
+
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+
+.active-nav-link a{
+  color: black;
+}
